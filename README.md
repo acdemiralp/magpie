@@ -1,0 +1,2 @@
+# magpie
+Minimalist visualization engine.
