@@ -30,12 +30,12 @@ std::unique_ptr<engine> make_default_engine()
     auto metadata        = entity->add_component<mp::metadata>      ();
     auto transform       = entity->add_component<mp::transform>     ();
     auto projection      = entity->add_component<mp::projection>    ();
-    auto controller      = entity->add_component<mp::controller>    (make_wasd_controller());
+    auto controller      = entity->add_component<mp::controller>    (make_wasd_controller(0.05, 0.25));
     metadata  ->entity   = entity;
     metadata  ->name     = "Default Camera";
     metadata  ->tags.push_back("default_camera");
     transform ->set_translation(glm::vec3(0.0f, 0.0f, -10.0f));
-    projection->set_perspective(60.0f, 4.0f / 3.0f, {0.3f, 1000.0f});
+    projection->set_perspective(70.0f, 4.0f / 3.0f, {0.001f, 1000.0f});
     
     input_system->on_key_press.connect([=] (di::key key)
     {
