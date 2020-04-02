@@ -9,7 +9,7 @@ class Project(ConanFile):
     url             = "https://github.com/acdemiralp/magpie"
     settings        = "arch", "build_type", "compiler", "os"
     generators      = "cmake"
-    requires        = (("acd/1.1.0@acdemiralp/makina"          ),
+    requires        = (("acd/1.2.0@acdemiralp/makina"          ),
                        ("boost/1.69.0@conan/stable"            ),
                        ("catch2/2.2.0@bincrafters/stable"      ),
                        ("di/1.4.0@acdemiralp/makina"           ),
